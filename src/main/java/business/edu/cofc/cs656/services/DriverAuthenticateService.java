@@ -2,7 +2,7 @@ package business.edu.cofc.cs656.services;
 
 import model.edu.cofc.cs656.models.Driver;
 
-public class DriverAuthenticate {
+public class DriverAuthenticateService {
 
 	private Driver driverID;
 	private double AuthenticationSession;
