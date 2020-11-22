@@ -89,7 +89,4 @@ public class Driver extends User{
 		System.out.println("You're in addAutoInfo method");
 	}
 	
-	public static void main(String[] args) {
-		System.out.println("You're in Driver");
-	}
 }

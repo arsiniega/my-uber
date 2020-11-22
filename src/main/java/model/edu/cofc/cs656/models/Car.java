@@ -2,10 +2,10 @@ package model.edu.cofc.cs656.models;
 
 public class Car {
 	
-	public String Make;
-	public String Model;
-	public String Year;
-	public String VIN;
+	private String Make;
+	private String Model;
+	private String Year;
+	private String VIN;
 	
 	public Car(String make, String model, String year, String vIN) {
 		super();
@@ -20,8 +20,37 @@ public class Car {
 		return "Car [Make=" + Make + ", Model=" + Model + ", Year=" + Year + ", VIN=" + VIN + "]";
 	}
 	
-    public static void main( String[] args ) {
-        System.out.println( "You're in Car.");
-    }
+
+    public String getMake() {
+		return Make;
+	}
+
+	public void setMake(String make) {
+		Make = make;
+	}
+
+	public String getModel() {
+		return Model;
+	}
+
+	public void setModel(String model) {
+		Model = model;
+	}
+
+	public String getYear() {
+		return Year;
+	}
+
+	public void setYear(String year) {
+		Year = year;
+	}
+
+	public String getVIN() {
+		return VIN;
+	}
+
+	public void setVIN(String vIN) {
+		VIN = vIN;
+	}
 
 }

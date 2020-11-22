@@ -4,34 +4,31 @@ public class AutoInfo {
 	
 	private int insuranceCompanyId;
 	private int driverlicense;
-	private String vin;
+	private Car car;
 	
-	public AutoInfo(int insuranceCompanyId, int driverlicense, String vin) {
+
+	public AutoInfo(int insuranceCompanyId, int driverlicense, Car car) {
 		super();
 		this.insuranceCompanyId = insuranceCompanyId;
 		this.driverlicense = driverlicense;
-		this.vin = vin;
+		this.car = car;
 	}
-	
 
 	@Override
 	public String toString() {
-		return "AutoInfo [insuranceCompanyId=" + insuranceCompanyId + ", driverlicense=" + driverlicense + ", vin="
-				+ vin + "]";
+		return "AutoInfo [insuranceCompanyId=" + insuranceCompanyId + ", driverlicense=" + driverlicense + ", car="
+				+ car + "]";
 	}
 
-
-
+	
 	public int getInsuranceCompanyId() {
 		return insuranceCompanyId;
 	}
 
 
-
 	public void setInsuranceCompanyId(int insuranceCompanyId) {
 		this.insuranceCompanyId = insuranceCompanyId;
 	}
-
 
 
 	public int getDriverlicense() {
@@ -45,18 +42,13 @@ public class AutoInfo {
 	}
 
 
-
-	public String getVin() {
-		return vin;
+	public Car getCar() {
+		return car;
 	}
 
-
-
-	public void setVin(String vin) {
-		this.vin = vin;
+	public void setCar(Car car) {
+		this.car = car;
 	}
-
-
 
 	private void validateInsurance() {
 		
@@ -69,10 +61,5 @@ public class AutoInfo {
 	private void addCar(Car c) {
 		
 	}
-	
-    public static void main( String[] args )
-    {
-        System.out.println( "You're in AutoInfo.");
-    }
 
 }
