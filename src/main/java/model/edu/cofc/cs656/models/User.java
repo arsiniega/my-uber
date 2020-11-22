@@ -3,14 +3,71 @@ package model.edu.cofc.cs656.models;
 public class User {
 	
 	private double userID;
-	public boolean isSignedUp;
+	private boolean isSignedUp;
 	private Profile UserProfile;
-	  
-    private void setOrigin(float geocode) {
-    	
-    }
     
-    public static void main( String[] args )
+    
+    public User(double userID, boolean isSignedUp, Profile userProfile) {
+		super();
+		this.userID = userID;
+		this.isSignedUp = isSignedUp;
+		UserProfile = userProfile;
+	}
+
+
+
+
+	@Override
+	public String toString() {
+		return "User [userID=" + userID + ", isSignedUp=" + isSignedUp + ", UserProfile=" + UserProfile + "]";
+	}
+
+
+
+
+	public double getUserID() {
+		return userID;
+	}
+
+
+
+
+	public void setUserID(double userID) {
+		this.userID = userID;
+	}
+
+
+
+
+	public boolean isSignedUp() {
+		return isSignedUp;
+	}
+
+
+
+
+	public void setSignedUp(boolean isSignedUp) {
+		this.isSignedUp = isSignedUp;
+	}
+
+
+
+
+	public Profile getUserProfile() {
+		return UserProfile;
+	}
+
+
+
+
+	public void setUserProfile(Profile userProfile) {
+		UserProfile = userProfile;
+	}
+
+
+
+
+	public static void main( String[] args )
     {
         System.out.println( "You're in User" );
     }
