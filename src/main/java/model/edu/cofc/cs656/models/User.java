@@ -15,8 +15,6 @@ public class User {
 	}
 
 
-
-
 	@Override
 	public String toString() {
 		return "User [userID=" + userID + ", isSignedUp=" + isSignedUp + ", UserProfile=" + UserProfile + "]";
