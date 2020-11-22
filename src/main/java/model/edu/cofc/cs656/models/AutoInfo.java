@@ -2,12 +2,11 @@ package model.edu.cofc.cs656.models;
 
 public class AutoInfo {
 	
-	private int insuranceCompanyId;
-	private int driverlicense;
+	private String insuranceCompanyId;
+	private String driverlicense;
 	private Car car;
-	
 
-	public AutoInfo(int insuranceCompanyId, int driverlicense, Car car) {
+	public AutoInfo(String insuranceCompanyId, String driverlicense, Car car) {
 		super();
 		this.insuranceCompanyId = insuranceCompanyId;
 		this.driverlicense = driverlicense;
@@ -20,26 +19,29 @@ public class AutoInfo {
 				+ car + "]";
 	}
 
-	
-	public int getInsuranceCompanyId() {
+
+	public String getInsuranceCompanyId() {
 		return insuranceCompanyId;
 	}
 
 
-	public void setInsuranceCompanyId(int insuranceCompanyId) {
+
+	public void setInsuranceCompanyId(String insuranceCompanyId) {
 		this.insuranceCompanyId = insuranceCompanyId;
 	}
 
 
-	public int getDriverlicense() {
+
+	public String getDriverlicense() {
 		return driverlicense;
 	}
 
 
 
-	public void setDriverlicense(int driverlicense) {
+	public void setDriverlicense(String driverlicense) {
 		this.driverlicense = driverlicense;
 	}
+
 
 
 	public Car getCar() {

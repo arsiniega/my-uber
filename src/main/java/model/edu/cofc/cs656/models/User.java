@@ -14,12 +14,10 @@ public class User {
 		UserProfile = userProfile;
 	}
 
-
 	@Override
 	public String toString() {
 		return "User [userID=" + userID + ", isSignedUp=" + isSignedUp + ", UserProfile=" + UserProfile + "]";
 	}
-
 
 
 
@@ -63,10 +61,4 @@ public class User {
 	}
 
 
-
-
-	public static void main( String[] args )
-    {
-        System.out.println( "You're in User" );
-    }
 }

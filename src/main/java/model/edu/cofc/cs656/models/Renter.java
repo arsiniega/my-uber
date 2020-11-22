@@ -2,40 +2,19 @@ package model.edu.cofc.cs656.models;
 
 public class Renter extends User{
 	
+	private boolean hasValidPayment;
 
-	public String RenterName;
-	
-	private double RenterID;
-
-	public Renter(double userID, boolean isSignedUp, Profile userProfile, String renterName, double renterID) {
+	public Renter(double userID, boolean isSignedUp, Profile userProfile, boolean validPayment) {
 		super(userID, isSignedUp, userProfile);
-		RenterName = renterName;
-		RenterID = renterID;
+		this.hasValidPayment = validPayment; 
 	}
-
 	
 
-	public String getRenterName() {
-		return RenterName;
+	@Override
+	public String toString() {
+		return "Renter [User=" + super.toString() + ", hasValidPayment=" + hasValidPayment + "]";
 	}
 
-
-
-	public void setRenterName(String renterName) {
-		RenterName = renterName;
-	}
-
-
-
-	public double getRenterID() {
-		return RenterID;
-	}
-
-
-
-	public void setRenterID(double renterID) {
-		RenterID = renterID;
-	}
 
 	private void signIn(double RenterID) {
 		System.out.println("You're in signIn method");
@@ -44,8 +23,5 @@ public class Renter extends User{
 	private void lookupRide() {
 		System.out.println("You're in lookupRide method");
 	}
-	
-	public static void main(String[] args) {
-		System.out.println("You're in Renter class");
-	}
+
 }
