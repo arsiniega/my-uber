@@ -15,8 +15,7 @@ public class AutoInfo {
 
 	@Override
 	public String toString() {
-		return "AutoInfo [insuranceCompanyId=" + insuranceCompanyId + ", driverlicense=" + driverlicense + ", car="
-				+ car + "]";
+		return "AutoInfo: " + insuranceCompanyId + " " + driverlicense + " " + car;
 	}
 
 

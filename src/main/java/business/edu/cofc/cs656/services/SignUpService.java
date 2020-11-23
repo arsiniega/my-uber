@@ -57,6 +57,8 @@ public class SignUpService {
         AutoInfo d1AutoInfo = new AutoInfo("GEICO123", "DLSC678", nissan);
         Driver d1 = new Driver(2, false, p2, false, d1AutoInfo);
         System.out.println(d1.toString());
+        
+        
        
     }
 	

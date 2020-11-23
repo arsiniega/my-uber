@@ -17,7 +17,8 @@ public class Driver extends User{
 	
 	@Override
 	public String toString() {
-		return "Driver [User=" + super.toString() + ", isVerifiedDriver=" + isVerifiedDriver + ", driverInformation=" + driverInformation + "]";
+		return "Driver " + super.toString() + " " + driverInformation + 
+				"\nVerified Driver = " + isVerifiedDriver;
 	}
 
 

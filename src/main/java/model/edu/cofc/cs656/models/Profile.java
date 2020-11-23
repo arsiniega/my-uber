@@ -19,8 +19,7 @@ public class Profile {
 	
 	@Override
 	public String toString() {
-		return "Profile [firstName=" + firstName + ", lastName=" + lastName + ", cellphone=" + cellphone + ", rating="
-				+ rating + "]";
+		return "Profile: " + firstName + " " + lastName + " " + cellphone + " " + rating + " star";
 	}
 
 

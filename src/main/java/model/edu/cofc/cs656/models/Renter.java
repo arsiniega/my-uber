@@ -12,7 +12,7 @@ public class Renter extends User{
 
 	@Override
 	public String toString() {
-		return "Renter [User=" + super.toString() + ", hasValidPayment=" + hasValidPayment + "]";
+		return "Renter " + super.toString() + "\nPayment Validated = " + hasValidPayment;
 	}
 
 
