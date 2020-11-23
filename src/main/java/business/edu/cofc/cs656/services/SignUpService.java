@@ -66,7 +66,7 @@ public class SignUpService {
         
         // Second user, to be signedUp Driver requires isVerifiedDriver from AutoInfo
         
-        Profile p2 = new Profile("Otto", "Mann", "417-848-2213", 3.5);
+        Profile p2 = new Profile("Otto", "Mann", "(417) 848-2213", 3.5);
         Car nissan = new Car("NISSAN", "SENTRA", "2001", "VIN8342");
         AutoInfo d1AutoInfo = new AutoInfo("GEICO123", "DLSC678", nissan);
         Driver d1 = new Driver(2, false, p2, false, d1AutoInfo);
