@@ -6,7 +6,7 @@ public class Driver extends User{
 	
 	private AutoInfo driverInformation;
 	
-	public Driver(double userID, boolean isSignedUp, Profile userProfile, String driverName, double driverId,
+	public Driver(double userID, boolean isSignedUp, Profile userProfile,
 			boolean isVerifiedDriver, AutoInfo driverInformation) {
 		super(userID, isSignedUp, userProfile);
 		this.isVerifiedDriver = isVerifiedDriver;

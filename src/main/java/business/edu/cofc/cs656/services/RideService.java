@@ -8,8 +8,8 @@ import model.edu.cofc.cs656.models.*;
  */
 public class RideService 
 {
-	public Driver driverID;
-	public Renter renterID;
+	public Driver driver;
+	public Renter renter;
 	private RideStatus status;
 	   
     private void setOrigin(float geocode) {

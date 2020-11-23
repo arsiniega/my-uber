@@ -54,14 +54,12 @@ public class Destination {
 		this.destinationState = destinationState;
 	}
 
-
-
-	private void convertAddresstoDestination(String addr) {
-
-	}
-
-	private void convertDestinationGeotoAddress(String addr) {
-
-	}
+//	private void convertAddresstoDestination(String addr) {
+//
+//	}
+//
+//	private void convertDestinationGeotoAddress(String addr) {
+//
+//	}
 
 }

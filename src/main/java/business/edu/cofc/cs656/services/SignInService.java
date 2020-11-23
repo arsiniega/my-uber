@@ -1,10 +1,10 @@
 package business.edu.cofc.cs656.services;
 
-import model.edu.cofc.cs656.models.Renter;
+import model.edu.cofc.cs656.models.User;
 
 public class SignInService {
 	
-	private Renter renterID;
+	private User userID;
 	private double SignInSession;
 	
 	private boolean validatePaymentMethods() {
