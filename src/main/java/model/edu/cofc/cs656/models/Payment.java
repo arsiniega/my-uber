@@ -4,6 +4,7 @@ public class Payment {
 	
 	private PaymentType payment;
 	private boolean paymentSubscription;
+	
 	private double discountRate;
 	
 	public Payment(PaymentType payment, boolean paymentSubscription, double discountRate) {
@@ -24,7 +25,7 @@ public class Payment {
 		super();
 		this.payment = new PaymentType();
 		this.paymentSubscription = false;
-		this.discountRate = 1.0;
+		this.discountRate = 0.0;
 	}
 
 

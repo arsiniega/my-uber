@@ -45,10 +45,9 @@ public class SignUpService {
 	}
 	
 	private boolean validPayment(Payment p) {
-		if ( (p.getPayment().getAccount() != null && p.getPayment().getRouting() != null &&
-				p.getPayment().getAccount().length() == 12 && 
+		if ( (p.getPayment().getAccount().length() == 12 && 
 				p.getPayment().getRouting().length() == 8)
-			 || (p.getPayment().getGiftCard() != null && p.getPayment().getGiftCard().contains("UBER")) )
+			 || (p.getPayment().getGiftCard().contains("UBER")) )
 			return true;
 		else
 			return false;
@@ -73,9 +72,28 @@ public class SignUpService {
         Driver d1 = new Driver(2, false, p2, false, d1AutoInfo);
         System.out.println(d1.toString());
         
+        Profile p3 = new Profile("Corp", "Uber", "843-428-0091", 4.5);
+        Renter r2 = new Renter(1, false, p3, false);
+        
+        PaymentType pt1 = new PaymentType("000777999102", "00804231"); // valid
+        PaymentType pt2 = new PaymentType("GIFTCARD-UBER"); // valid
+        PaymentType pt3 = new PaymentType("777999102", "00804231"); // invalid
+        PaymentType pt4 = new PaymentType("UBER-GIFTCARD-LYFT"); // invalid
+        
+        
+        Payment pay1 = new Payment(pt2,true,0.1);
+        Payment pay2 = new Payment(pt1,false,0.0);
+        Payment pay3 = new Payment(pt3,true,0.1);
+        Payment pay4 = new Payment(pt4,false,0.0);
+        
         SignUpService service = new SignUpService();
         service.signUpUser(r1);
         service.signUpUser(d1);
+        service.signUpUser(r2,pay1);
+        service.signUpUser(r1,pay2);
+        service.signUpUser(d1,pay3);
+        service.signUpUser(d1,pay4);
+        
         service.printUserArray();
     }
 	
