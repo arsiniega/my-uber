@@ -11,6 +11,7 @@ public class Driver extends User{
 		super(userID, isSignedUp, userProfile);
 		this.isVerifiedDriver = isVerifiedDriver;
 		this.driverInformation = driverInformation;
+		System.out.println("You've created a Driver");
 	}
 
 
@@ -46,17 +47,17 @@ public class Driver extends User{
 	}
 
 
-	private boolean authenticateDriver() {
-		System.out.println("You're in authenticateDriver method");
-		return true;
-	}
-	
-	private void lookupRidePopup() {
-		System.out.println("You're in lookupRidePopup method");
-	}
-	
-	private void addAutoInfo() {
-		System.out.println("You're in addAutoInfo method");
-	}
+//	private boolean authenticateDriver() {
+//		System.out.println("You're in authenticateDriver method");
+//		return true;
+//	}
+//	
+//	private void lookupRidePopup() {
+//		System.out.println("You're in lookupRidePopup method");
+//	}
+//	
+//	private void addAutoInfo() {
+//		System.out.println("You're in addAutoInfo method");
+//	}
 	
 }

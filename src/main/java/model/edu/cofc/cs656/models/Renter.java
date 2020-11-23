@@ -2,26 +2,37 @@ package model.edu.cofc.cs656.models;
 
 public class Renter extends User{
 	
-	private boolean hasValidPayment;
+	private boolean monthlySubscription;
 
-	public Renter(double userID, boolean isSignedUp, Profile userProfile, boolean validPayment) {
+	public Renter(double userID, boolean isSignedUp, Profile userProfile, boolean monthly) {
 		super(userID, isSignedUp, userProfile);
-		this.hasValidPayment = validPayment; 
+		this.monthlySubscription = monthly; 
+		System.out.println("You've created a Renter");
 	}
 	
 
 	@Override
 	public String toString() {
-		return "Renter " + super.toString() + "\nPayment Validated = " + hasValidPayment;
+		return "Renter " + super.toString() + "\nSubscription based = " + monthlySubscription;
 	}
 
 
-	private void signIn(double RenterID) {
-		System.out.println("You're in signIn method");
+	public boolean ismonthlySubscription() {
+		return monthlySubscription;
 	}
-	
-	private void lookupRide() {
-		System.out.println("You're in lookupRide method");
+
+
+	public void setmonthlySubscription(boolean monthlySubscription) {
+		this.monthlySubscription = monthlySubscription;
 	}
+
+
+//	private void signIn(double RenterID) {
+//		System.out.println("You're in signIn method");
+//	}
+//	
+//	private void lookupRide() {
+//		System.out.println("You're in lookupRide method");
+//	}
 
 }

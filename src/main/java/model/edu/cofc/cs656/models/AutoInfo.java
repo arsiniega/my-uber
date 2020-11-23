@@ -15,7 +15,7 @@ public class AutoInfo {
 
 	@Override
 	public String toString() {
-		return "AutoInfo: " + insuranceCompanyId + " " + driverlicense + " " + car;
+		return "AutoInfo: " + insuranceCompanyId + "-" + driverlicense + " " + car;
 	}
 
 
@@ -51,16 +51,16 @@ public class AutoInfo {
 		this.car = car;
 	}
 
-	private void validateInsurance() {
-		
-	}
-	
-	private void validateDriverLicense() {
-		
-	}
-	
-	private void addCar(Car c) {
-		
-	}
+//	private void validateInsurance() {
+//		
+//	}
+//	
+//	private void validateDriverLicense() {
+//		
+//	}
+//	
+//	private void addCar(Car c) {
+//		
+//	}
 
 }

@@ -12,7 +12,20 @@ public class Payment {
 		this.paymentSubscription = paymentSubscription;
 		this.discountRate = discountRate;
 	}
+	
+	public Payment(Payment p) {
+		super();
+		this.payment = p.payment;
+		this.paymentSubscription = p.paymentSubscription;
+		this.discountRate = p.discountRate;
+	}
 
+	public Payment() {
+		super();
+		this.payment = new PaymentType();
+		this.paymentSubscription = false;
+		this.discountRate = 1.0;
+	}
 
 
 	@Override

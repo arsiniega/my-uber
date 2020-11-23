@@ -11,14 +11,21 @@ public class PaymentType {
 		super();
 		this.account = account;
 		this.routing = routing;
-		this.giftCard = null;
+		this.giftCard = "0";
 	}
 	
 	public PaymentType(String giftcard) {
 		super();
-		this.account = null;
-		this.routing = null;
+		this.account = "0";
+		this.routing = "0";
 		this.giftCard = giftcard;
+	}
+	
+	public PaymentType() {
+		super();
+		this.account = "0";
+		this.routing = "0";
+		this.giftCard = "0";
 	}
 
 	@Override
@@ -54,11 +61,17 @@ public class PaymentType {
     {
         System.out.println( "You're in PaymentType.");
         PaymentType pay = new PaymentType("00076542322","3445642");
-        System.out.println( "Payment 1: " + pay);
+        System.out.println( "PaymentType 1: " + pay);
         PaymentType pay2 = new PaymentType("UBER23A67");
-        System.out.println( "Payment 2: " + pay2);
+        System.out.println( "PaymentType 2: " + pay2);
         pay2.setAccount("12234556");
-        System.out.println( "Payment 2: " + pay2);
+        System.out.println( "PaymentType 2: " + pay2);
+        
+        Payment p = new Payment();
+        System.out.println("Payment 1: " + p.toString());
+        p.setPayment(pay);
+        System.out.println("Payment 1: " + p.toString());
+        
         
         
     }

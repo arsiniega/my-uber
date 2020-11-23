@@ -56,14 +56,12 @@ public class Origin {
 		this.originGeocode = originGeocode;
 	}
 
-
-
-	private void convertAddresstoOriginGeo(String addr) {
-		
-	}
-	
-	private void convertOriginGeotoAddress(String addr) {
-		
-	}
+//	private void convertAddresstoOriginGeo(String addr) {
+//		
+//	}
+//	
+//	private void convertOriginGeotoAddress(String addr) {
+//		
+//	}
 	
 }

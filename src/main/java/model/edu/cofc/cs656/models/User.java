@@ -16,12 +16,7 @@ public class User {
 
 	@Override
 	public String toString() {
-		if (isSignedUp()) 
-			return "Signed up!"+ 
-					"\n" + UserProfile;
-		else
-			return "Not signed up!" + 
-					"\n" + UserProfile;
+		return UserProfile.toString();
 	}
 
 

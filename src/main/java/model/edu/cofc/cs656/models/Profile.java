@@ -5,10 +5,10 @@ public class Profile {
 	private String firstName;
 	private String lastName;
 	private String cellphone;
-	private int rating;
+	private double rating;
 
 	
-	public Profile(String firstName, String lastName, String cellphone, int rating) {
+	public Profile(String firstName, String lastName, String cellphone, double rating) {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
@@ -19,9 +19,12 @@ public class Profile {
 	
 	@Override
 	public String toString() {
-		return "Profile: " + firstName + " " + lastName + " " + cellphone + " " + rating + " star";
+		return "UserProfile: " + getName() + " " + cellphone + " " + rating + " star";
 	}
 
+	public String getName() {
+		return firstName + " " + lastName;
+	}
 
 	public String getFirstName() {
 		return firstName;
@@ -59,24 +62,24 @@ public class Profile {
 
 
 
-	public int getRating() {
+	public double getRating() {
 		return rating;
 	}
 
 
 
-	public void setRating(int rating) {
+	public void setRating(double rating) {
 		this.rating = rating;
 	}
 
 
 
-	private void updateProfile() {
-		
-	}
-	
-	private void updateImage() {
-		
-	}
+//	private void updateProfile() {
+//		
+//	}
+//	
+//	private void updateImage() {
+//		
+//	}
 	
 }
