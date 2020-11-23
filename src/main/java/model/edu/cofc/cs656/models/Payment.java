@@ -7,11 +7,11 @@ public class Payment {
 	
 	private double discountRate;
 	
-	public Payment(PaymentType payment, boolean paymentSubscription, double discountRate) {
+	public Payment(PaymentType payment, boolean paymentSubscription) {
 		super();
 		this.payment = payment;
 		this.paymentSubscription = paymentSubscription;
-		this.discountRate = discountRate;
+		this.discountRate = 0;
 	}
 	
 	public Payment(Payment p) {

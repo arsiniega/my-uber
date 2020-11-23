@@ -30,6 +30,7 @@ public class SignUpService {
 	}
 
 	public void signUpUser(User u, Payment p) {
+		setDiscountSubscription(p);
 		UserPayment userPay = new UserPayment(u, p);
 		signUpArr.add(userPay);
 	}
@@ -53,8 +54,11 @@ public class SignUpService {
 			return false;
 	}
 	
-	private void validatePayment(Payment p) {
-		
+	private void setDiscountSubscription(Payment p) {
+		if (validPayment(p) && p.isPaymentSubscription()) {
+			System.out.println("Valid payment qualifies for 10% discount!");
+			p.setDiscountRate(0.1);
+		}
 	}
 	
 	public static void main( String[] args ) {
@@ -81,10 +85,10 @@ public class SignUpService {
         PaymentType pt4 = new PaymentType("UBER-GIFTCARD-LYFT"); // invalid
         
         
-        Payment pay1 = new Payment(pt2,true,0.1);
-        Payment pay2 = new Payment(pt1,false,0.0);
-        Payment pay3 = new Payment(pt3,true,0.1);
-        Payment pay4 = new Payment(pt4,false,0.0);
+        Payment pay1 = new Payment(pt2,true);
+        Payment pay2 = new Payment(pt1,false);
+        Payment pay3 = new Payment(pt3,true);
+        Payment pay4 = new Payment(pt4,false);
         
         SignUpService service = new SignUpService();
         service.signUpUser(r1);

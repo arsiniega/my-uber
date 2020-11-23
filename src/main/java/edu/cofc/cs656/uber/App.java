@@ -3,8 +3,12 @@ package edu.cofc.cs656.uber;
 import model.edu.cofc.cs656.models.AutoInfo;
 import model.edu.cofc.cs656.models.Car;
 import model.edu.cofc.cs656.models.Driver;
+import model.edu.cofc.cs656.models.Payment;
+import model.edu.cofc.cs656.models.PaymentType;
 import model.edu.cofc.cs656.models.Profile;
 import model.edu.cofc.cs656.models.Renter;
+import business.edu.cofc.cs656.services.SignUpService;
+import business.edu.cofc.cs656.services.ReportWriterService;
 
 /**
  * Hello world!
@@ -36,12 +40,37 @@ public class App
         
         AutoInfo reg1 = new AutoInfo("GEICO123", "DLSC100542819", car1);
         AutoInfo reg2 = new AutoInfo("STATEFARM123", "DLSC100552312", car2);
-
-        // Second user, to be signedUp Driver requires isVerifiedDriver from AutoInfo
         
-        Car nissan = new Car("NISSAN", "SENTRA", "2001", "VIN8342");
-        AutoInfo d1AutoInfo = new AutoInfo("GEICO123", "DLSC678", nissan);
-        Driver d1 = new Driver(2, false, pro2, false, d1AutoInfo);
-        System.out.println(d1.toString());
+        // valid payment types have 12 digit checking # and 8 digits routing #
+        PaymentType pt1 = new PaymentType("000777999102", "00804231"); 
+        // valid payment types have UBER in the giftcard code
+        PaymentType pt2 = new PaymentType("GIFTCARD-UBER"); 
+        // invalid checking/routing combo
+        PaymentType pt3 = new PaymentType("777999102", "00804231");
+        // invalid gift card
+        PaymentType pt4 = new PaymentType("U-GIFTCARD-LYFT");
+        
+        
+        Payment pay1 = new Payment(pt2,true);
+        Payment pay2 = new Payment(pt1,false);
+        Payment pay3 = new Payment(pt3,true);
+        Payment pay4 = new Payment(pt4,false);
+        
+//        SignUpService service = new SignUpService();
+//        service.signUpUser(r1);
+//        service.signUpUser(d1);
+//        service.signUpUser(r2,pay1);
+//        service.signUpUser(r1,pay2);
+//        service.signUpUser(d1,pay3);
+//        service.signUpUser(d1,pay4);
+//        
+//        service.printUserArray();
+//        // Second user, to be signedUp Driver requires isVerifiedDriver from AutoInfo
+//        
+//        Car nissan = new Car("NISSAN", "SENTRA", "2001", "VIN8342");
+//        AutoInfo d1AutoInfo = new AutoInfo("GEICO123", "DLSC678", nissan);
+//        Driver d1 = new Driver(2, false, pro2, false, d1AutoInfo);
+//        System.out.println(d1.toString());
+        
     }
 }
