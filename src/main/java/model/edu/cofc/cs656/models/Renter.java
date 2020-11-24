@@ -2,28 +2,28 @@ package model.edu.cofc.cs656.models;
 
 public class Renter extends User{
 	
-	private boolean monthlySubscription;
+	private boolean renterPaymentValidated;
 
-	public Renter(double userID, boolean isSignedUp, Profile userProfile, boolean monthly) {
+	public Renter(double userID, boolean isSignedUp, Profile userProfile) {
 		super(userID, isSignedUp, userProfile);
-		this.monthlySubscription = monthly; 
+		this.renterPaymentValidated = false;
 		System.out.println("You've created a Renter");
 	}
 	
 
 	@Override
 	public String toString() {
-		return "Renter " + super.toString() + "\nSubscription based = " + monthlySubscription;
+		return "Renter " + super.toString() + "\nSubscription based = " + renterPaymentValidated;
 	}
 
 
-	public boolean ismonthlySubscription() {
-		return monthlySubscription;
+	public boolean isrenterPaymentValidated() {
+		return renterPaymentValidated;
 	}
 
 
-	public void setmonthlySubscription(boolean monthlySubscription) {
-		this.monthlySubscription = monthlySubscription;
+	public void setrenterPaymentValidated(boolean renterPaymentValidated) {
+		this.renterPaymentValidated = renterPaymentValidated;
 	}
 
 

@@ -1,8 +1,6 @@
 package business.edu.cofc.cs656.services;
 
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
 
 import model.edu.cofc.cs656.models.AutoInfo;
 import model.edu.cofc.cs656.models.Car;
@@ -26,15 +24,17 @@ public class SignUpService {
 		Payment pay = new Payment();
 		UserPayment userPay = new UserPayment(u, pay);
 		signUpArr.add(userPay);
-//		if (u instanceof Driver) {
+		System.out.println("Successfully added User");
 	}
 
 	public void signUpUser(User u, Payment p) {
-		setDiscountSubscription(p);
+		setDiscountForMonthlySubscription(p);
 		UserPayment userPay = new UserPayment(u, p);
 		signUpArr.add(userPay);
+		System.out.println("Successfully added User and Payment");
 	}
 	
+
 	public void printUserArray() {
 		for (UserPayment userPay: signUpArr) {
 			if (validPayment(userPay.getP()))
@@ -54,18 +54,24 @@ public class SignUpService {
 			return false;
 	}
 	
-	private void setDiscountSubscription(Payment p) {
+	private void setDiscountForMonthlySubscription(Payment p) {
 		if (validPayment(p) && p.isPaymentSubscription()) {
-			System.out.println("Valid payment qualifies for 10% discount!");
+			System.out.println("Valid payment qualifies for 10% discount");
 			p.setDiscountRate(0.1);
-		}
+		} else
+			System.out.println("Payment not valid or monthly subscription not activated");
 	}
 	
+	
+	public ArrayList<UserPayment> getSignUpArr() {
+		return signUpArr;
+	}
+
 	public static void main( String[] args ) {
         System.out.println( "You're in SignUpService.");
         
         Profile p1 = new Profile("Alan", "Smith", "843-428-0091", 4.5);
-        Renter r1 = new Renter(1, false, p1, false);
+        Renter r1 = new Renter(1, false, p1);
         System.out.println(r1.toString());
         
         // Second user, to be signedUp Driver requires isVerifiedDriver from AutoInfo
@@ -77,7 +83,7 @@ public class SignUpService {
         System.out.println(d1.toString());
         
         Profile p3 = new Profile("Corp", "Uber", "843-428-0091", 4.5);
-        Renter r2 = new Renter(1, false, p3, false);
+        Renter r2 = new Renter(1, false, p3);
         
         PaymentType pt1 = new PaymentType("000777999102", "00804231"); // valid
         PaymentType pt2 = new PaymentType("GIFTCARD-UBER"); // valid

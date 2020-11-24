@@ -4,7 +4,6 @@ public class Payment {
 	
 	private PaymentType payment;
 	private boolean paymentSubscription;
-	
 	private double discountRate;
 	
 	public Payment(PaymentType payment, boolean paymentSubscription) {
