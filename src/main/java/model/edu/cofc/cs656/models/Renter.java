@@ -13,10 +13,14 @@ public class Renter extends User{
 
 	@Override
 	public String toString() {
+		return "Renter " + super.toString();
+	}
+
+	public String fullToString() {
 		return "Renter " + super.toString() + "\nSubscription based = " + renterPaymentValidated;
 	}
 
-
+	
 	public boolean isrenterPaymentValidated() {
 		return renterPaymentValidated;
 	}

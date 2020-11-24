@@ -18,11 +18,13 @@ public class Driver extends User{
 	
 	@Override
 	public String toString() {
+		return "Driver " + super.toString();
+	}
+
+	public String fullToString() {
 		return "Driver " + super.toString() + " " + driverInformation + 
 				"\nVerified Driver = " + isVerifiedDriver;
 	}
-
-
 	
 	public boolean isVerifiedDriver() {
 		return isVerifiedDriver;
