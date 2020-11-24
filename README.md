@@ -10,5 +10,7 @@ To receive a 10% discount you must have a valid payment and have chosen a Monthl
 One-Time Subscriptions are not considered for a 10% discount at this time.
 
 This project was built with Maven.  
+
 To build: mvn package
+
 To run: java -jar target/my-uber-1.0-SNAPSHOT.jar
