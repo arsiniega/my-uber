@@ -8,7 +8,7 @@ public class UserPayment {
 			super();
 			this.u = u;
 			this.p = p;
-			System.out.println("New User Payment: " + " " + u + " " + p);
+			System.out.println(u + "\n       " + p);
 		}
 		@Override
 		public String toString() {

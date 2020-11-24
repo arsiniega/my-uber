@@ -24,14 +24,14 @@ public class SignUpService {
 		Payment pay = new Payment();
 		UserPayment userPay = new UserPayment(u, pay);
 		signUpArr.add(userPay);
-		System.out.println("Successfully added User");
+		System.out.println("[[[Successfully added User]]]");
 	}
 
 	public void signUpUser(User u, Payment p) {
 		setDiscountForMonthlySubscription(p);
 		UserPayment userPay = new UserPayment(u, p);
 		signUpArr.add(userPay);
-		System.out.println("Successfully added User and Payment");
+		System.out.println("[[[Successfully added User and Payment]]]");
 	}
 	
 
@@ -56,10 +56,10 @@ public class SignUpService {
 	
 	private void setDiscountForMonthlySubscription(Payment p) {
 		if (validPayment(p) && p.isPaymentSubscription()) {
-			System.out.println("Valid payment qualifies for 10% discount");
+			System.out.println("[[[Valid payment qualifies for 10% discount]]]");
 			p.setDiscountRate(0.1);
 		} else
-			System.out.println("Payment not valid or monthly subscription not activated");
+			System.out.println("[[[Payment not valid or monthly subscription not activated]]]");
 	}
 	
 	
