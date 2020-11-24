@@ -107,21 +107,14 @@ public class App {
         
         ReportWriterService report = new ReportWriterService(service.getSignUpArr());
         
-//        service.signUpUser(r2,pay1);
-//        service.signUpUser(r1,pay2);
-//        service.signUpUser(d1,pay3);
-//        service.signUpUser(d1,pay4);
-//        
         report.reportAllUsers();
         //report.reportFullUserInfo();
-        report.reportUsersDiscount();
+        report.reportAllUserPayments();
+        report.reportOnlyValidMonthlyDiscounts();
+        report.reportOnlyInvalidMonthlyDiscounts();
+        report.reportValidNonMonthlyDiscounts();
+        report.reportInvalidNonMonthlyDiscounts();
         
-//        // Second user, to be signedUp Driver requires isVerifiedDriver from AutoInfo
-//        
-//        Car nissan = new Car("NISSAN", "SENTRA", "2001", "VIN8342");
-//        AutoInfo d1AutoInfo = new AutoInfo("GEICO123", "DLSC678", nissan);
-//        Driver d1 = new Driver(2, false, pro2, false, d1AutoInfo);
-//        System.out.println(d1.toString());
         
     }
 }
