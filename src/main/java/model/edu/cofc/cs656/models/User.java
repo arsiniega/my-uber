@@ -2,12 +2,12 @@ package model.edu.cofc.cs656.models;
 
 public class User {
 	
-	private double userID;
+	private int userID;
 	private boolean isSignedUp;
 	private Profile UserProfile;
     
     
-    public User(double userID, boolean isSignedUp, Profile userProfile) {
+    public User(int userID, boolean isSignedUp, Profile userProfile) {
 		super();
 		this.userID = userID;
 		this.isSignedUp = isSignedUp;
@@ -21,14 +21,14 @@ public class User {
 
 
 
-	public double getUserID() {
+	public int getUserID() {
 		return userID;
 	}
 
 
 
 
-	public void setUserID(double userID) {
+	public void setUserID(int userID) {
 		this.userID = userID;
 	}
 

@@ -4,7 +4,7 @@ public class Renter extends User{
 	
 	private boolean renterPaymentValidated;
 
-	public Renter(double userID, boolean isSignedUp, Profile userProfile) {
+	public Renter(int userID, boolean isSignedUp, Profile userProfile) {
 		super(userID, isSignedUp, userProfile);
 		this.renterPaymentValidated = false;
 		System.out.println("You've created a Renter");

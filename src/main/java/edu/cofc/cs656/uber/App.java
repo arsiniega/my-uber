@@ -97,11 +97,13 @@ public class App {
         service.signUpUser(rent3);
         service.signUpUser(rent4, pay2);
         service.signUpUser(rent5, pay3);
+        service.signUpUser(rent6, pay5);
+        service.signUpUser(rent7, pay6);
+        
         service.signUpUser(drive1);
         service.signUpUser(drive2, pay4);
         service.signUpUser(drive3, pay1);
-        service.signUpUser(rent6, pay5);
-        service.signUpUser(rent7, pay6);
+        //service.printUserArray();
         
         ReportWriterService report = new ReportWriterService(service.getSignUpArr());
         
@@ -110,7 +112,10 @@ public class App {
 //        service.signUpUser(d1,pay3);
 //        service.signUpUser(d1,pay4);
 //        
-        service.printUserArray();
+        report.reportAllUsers();
+        //report.reportFullUserInfo();
+        report.reportUsersDiscount();
+        
 //        // Second user, to be signedUp Driver requires isVerifiedDriver from AutoInfo
 //        
 //        Car nissan = new Car("NISSAN", "SENTRA", "2001", "VIN8342");

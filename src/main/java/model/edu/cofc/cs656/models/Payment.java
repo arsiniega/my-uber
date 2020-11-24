@@ -57,6 +57,13 @@ public class Payment {
 	public void setPaymentSubscription(boolean paymentSubscription) {
 		this.paymentSubscription = paymentSubscription;
 	}
+	
+	public String getPaymentSubscription() {
+		if (paymentSubscription)
+			return "Monthly Subscription";
+		else
+			return "One-Time Subscription";
+	}
 
 
 
