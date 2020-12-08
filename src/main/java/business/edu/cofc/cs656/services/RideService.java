@@ -10,11 +10,10 @@ public class RideService
 {
 	public Driver driver;
 	public Renter renter;
-	private RideStatus status;
+	private Ride status;
 	
-	RideService(Renter r, Driver d) {
-		this.driver = d;
-		this.renter = r;
+	RideService() {
+				
 	}
 	   
     private void setOrigin(float geocode) {
@@ -29,11 +28,11 @@ public class RideService
     	
     }
     
-    public void startRide(Renter renterID) {
+    public void startRide(Renter renter) {
     	
     }
     
-    public boolean acceptRide(Driver driverID) {
+    public boolean acceptRide(Driver driver) {
     	return true;
     }
     
@@ -41,9 +40,8 @@ public class RideService
     {
         System.out.println( "You're in Ride.");
         System.out.println( "Are we riding?"); 
-        if (RideStatus.InProgress.getActiveRideStatus() == true)
-        	System.out.println( "Yes we are!");
-        else
-        	System.out.println( "No, we aren't!");
+        Ride testRide = new Ride();
+        testRide.setStatus(Ride.RideStatus.NotStarted);
+        
     }
 }

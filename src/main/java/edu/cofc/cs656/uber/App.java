@@ -123,6 +123,8 @@ public class App {
         signIn.validate(rent4);
         signIn.validate(rent5);
         signIn.validate(rent6);
+        
+        
         //System.out.println("Is rent1 able to sign in? "
         
     }

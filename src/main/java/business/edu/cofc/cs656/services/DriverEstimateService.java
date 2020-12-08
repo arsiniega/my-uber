@@ -7,7 +7,7 @@ public class DriverEstimateService extends EstimateService{
 	}
 	
 	private void displayMap() {
-		
+		System.out.println( "Driver Earning:" + getDriverEarning());
 	}
 	
 	public static void main( String[] args ) {
