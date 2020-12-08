@@ -13,4 +13,9 @@ This project was built with Maven.
 
 To build: mvn package
 
-To run: java -jar target/my-uber-1.0-SNAPSHOT.jar
+To execute jar: java -jar target/my-uber-1.0-SNAPSHOT.jar
+
+To build: mvn clean compile
+
+To execute java: mvn exec:java
+
