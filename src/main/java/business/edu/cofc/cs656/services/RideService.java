@@ -10,10 +10,10 @@ public class RideService
 {
 	public Driver driver;
 	public Renter renter;
-	private Ride status;
+	private Ride ridestatus;
 	
 	RideService() {
-				
+		ridestatus.setStatus(Ride.RideStatus.NotStarted);
 	}
 	   
     private void setOrigin(float geocode) {
