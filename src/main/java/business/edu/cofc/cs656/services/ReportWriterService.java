@@ -35,6 +35,15 @@ public class ReportWriterService {
 		}
 	}
 	
+	public void reportFullUserDebug() {
+		System.out.println("[Report Full User Info]");
+		for (UserPayment user: signUpArr) {
+			if (user.getU() instanceof Renter) 
+				//((Renter) u).setrenterPaymentValidated(true);
+			System.out.println("User " + user.toString());		
+		}
+	}
+	
 	public void reportAllUserPayments() {
 		System.out.println("[Report All User Payments]");
 		for (UserPayment user: signUpArr) {

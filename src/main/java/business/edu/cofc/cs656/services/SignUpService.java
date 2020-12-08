@@ -21,6 +21,7 @@ public class SignUpService {
 	}
 
 	public void signUpUser(User u) {
+		u.setSignedUp(true); // when user is in the array they are signed up
 		Payment pay = new Payment();
 		UserPayment userPay = new UserPayment(u, pay);
 		signUpArr.add(userPay);
@@ -28,7 +29,8 @@ public class SignUpService {
 	}
 
 	public void signUpUser(User u, Payment p) {
-		setDiscountForMonthlySubscription(p);
+		u.setSignedUp(true); // when user is in the array they are signed up
+		setDiscountForMonthlySubscription(u, p);
 		UserPayment userPay = new UserPayment(u, p);
 		signUpArr.add(userPay);
 		System.out.println("[[[Successfully added User and Payment]]]");
@@ -48,18 +50,28 @@ public class SignUpService {
 	private boolean validPayment(Payment p) {
 		if ( (p.getPayment().getAccount().length() == 12 && 
 				p.getPayment().getRouting().length() == 8)
-			 || (p.getPayment().getGiftCard().contains("UBER")) )
+			 || (p.getPayment().getGiftCard().contains("UBER")) ) {
 			return true;
-		else
+		}
+		else {
 			return false;
+		}
 	}
 	
-	private void setDiscountForMonthlySubscription(Payment p) {
-		if (validPayment(p) && p.isPaymentSubscription()) {
-			System.out.println("[[[Valid payment qualifies for 10% discount]]]");
-			p.setDiscountRate(0.1);
-		} else
+	private void setDiscountForMonthlySubscription(User u, Payment p) {	
+		if (validPayment(p)) { 
+			if (u instanceof Renter) {
+				((Renter) u).setrenterPaymentValidated(true);
+			}
+			if (p.isPaymentSubscription()) {
+				System.out.println("[[[Valid payment qualifies for 10% discount]]]");
+				p.setDiscountRate(0.1);
+			} else {
+				System.out.println("[[[Payment not valid or monthly subscription not activated]]]");
+			}
+		} else {
 			System.out.println("[[[Payment not valid or monthly subscription not activated]]]");
+		}
 	}
 	
 	

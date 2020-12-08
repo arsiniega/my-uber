@@ -11,13 +11,18 @@ public class RideService
 	public Driver driver;
 	public Renter renter;
 	private RideStatus status;
+	
+	RideService(Renter r, Driver d) {
+		this.driver = d;
+		this.renter = r;
+	}
 	   
     private void setOrigin(float geocode) {
-    	
+    	System.out.println("Origin : " + geocode);
     }
     
     private void setDestination(float geocode) {
-    	
+    	System.out.println("Destination : " + geocode);
     }
     
     private void chooseServiceType() {

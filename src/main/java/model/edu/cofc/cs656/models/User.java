@@ -16,7 +16,7 @@ public class User {
 
 	@Override
 	public String toString() {
-		return UserProfile.toString();
+		return "SignedUp: " + isSignedUp() + " " + UserProfile.toString();
 	}
 
 

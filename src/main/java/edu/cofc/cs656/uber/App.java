@@ -9,6 +9,7 @@ import model.edu.cofc.cs656.models.Profile;
 import model.edu.cofc.cs656.models.Renter;
 import business.edu.cofc.cs656.services.SignUpService;
 import business.edu.cofc.cs656.services.ReportWriterService;
+import business.edu.cofc.cs656.services.SignInService;
 
 /**
  * Hello world!
@@ -107,14 +108,22 @@ public class App {
         
         ReportWriterService report = new ReportWriterService(service.getSignUpArr());
         
-        report.reportAllUsers();
-        //report.reportFullUserInfo();
+        //report.reportAllUsers();
+        //report.reportFullUserDebug();
         report.reportAllUserPayments();
         report.reportOnlyValidMonthlyDiscounts();
         report.reportOnlyInvalidMonthlyDiscounts();
         report.reportValidNonMonthlyDiscounts();
         report.reportInvalidNonMonthlyDiscounts();
         
+        SignInService signIn = new SignInService();
+        signIn.validate(rent1);
+        signIn.validate(rent2);
+        signIn.validate(rent3);
+        signIn.validate(rent4);
+        signIn.validate(rent5);
+        signIn.validate(rent6);
+        //System.out.println("Is rent1 able to sign in? "
         
     }
 }
