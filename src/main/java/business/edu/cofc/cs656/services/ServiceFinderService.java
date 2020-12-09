@@ -4,7 +4,12 @@ public class ServiceFinderService {
 
 	private double carClassMultiplier;
 	
-	private boolean isUberXLAvailable(float OriginGeocode) {
+	public boolean isUberAvailable(float OriginGeocode) {
+		System.out.println("Uber Service is available");
+		return true;
+	}
+	
+	public boolean isUberXLAvailable(float OriginGeocode) {
 		return false;
 	}
 	

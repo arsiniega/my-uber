@@ -9,6 +9,7 @@ import model.edu.cofc.cs656.models.Profile;
 import model.edu.cofc.cs656.models.Renter;
 import business.edu.cofc.cs656.services.SignUpService;
 import business.edu.cofc.cs656.services.ReportWriterService;
+import business.edu.cofc.cs656.services.RideService;
 import business.edu.cofc.cs656.services.SignInService;
 
 /**
@@ -116,6 +117,8 @@ public class App {
         report.reportValidNonMonthlyDiscounts();
         report.reportInvalidNonMonthlyDiscounts();
         
+        // Sign-in demo and Ride acceptance from Renter and Driver Demo
+        
         SignInService signIn = new SignInService();
         signIn.validate(rent1);
         signIn.validate(rent2);
@@ -124,8 +127,13 @@ public class App {
         signIn.validate(rent5);
         signIn.validate(rent6);
         
-        
-        //System.out.println("Is rent1 able to sign in? "
-        
+        RideService ride1 = new RideService();
+        ride1.chooseServiceType();
+        ride1.startRide(rent1);
+        ride1.isRideInProgress();
+        ride1.acceptRide(drive1);
+        ride1.isRideInProgress();
+        ride1.finishRide(rent1, drive1);
+        ride1.isRideInProgress();
     }
 }
